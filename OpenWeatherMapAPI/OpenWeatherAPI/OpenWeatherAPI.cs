@@ -16,7 +16,8 @@ namespace APIsAndJSON
 {
     public class OpenWeatherAPI
     {
-        const string AppID = "dcc6efe1985afa5f97a91fed9329b002";
+        const string AppID = "XXXXXXXXXYXXXXXXXXXYXX";
+
         private HttpClient _client;
         
         public OpenWeatherAPI(HttpClient client) 
