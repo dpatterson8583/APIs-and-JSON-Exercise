@@ -1,10 +1,27 @@
-﻿namespace APIsAndJSON
+﻿using System;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+
+namespace APIsAndJSON
 {
-    public class Program
+    class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            HttpClient client = new HttpClient();
+            RonVSKanyeAPI QAPI = new RonVSKanyeAPI(client);
+
+            for (int i = 0; i < 5; i++)
+            {
+
+                Console.WriteLine($"Kanye said:  {QAPI.GetKanyeQuote()}");
+
+                Console.WriteLine($"Then Ron said: {QAPI.GetRonQuote()}");
+
+            }
+
         }
+
+
     }
 }
